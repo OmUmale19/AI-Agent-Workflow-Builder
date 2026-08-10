@@ -1,6 +1,6 @@
 -- ============================================================
 -- AI Agent Workflow Builder
--- PostgreSQL Schema & Migrations
+-- PostgreSQL Schema Migration (up.sql)
 -- ============================================================
 
 CREATE EXTENSION IF NOT EXISTS pgcrypto;
