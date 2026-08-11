@@ -1,0 +1,41 @@
+table:
+  name: workflow_steps
+  schema: public
+insert_permissions:
+  - role: public
+    permission:
+      check: {}
+      columns:
+        - id
+        - workflow_id
+        - name
+        - position
+        - type
+        - config
+select_permissions:
+  - role: public
+    permission:
+      columns:
+        - id
+        - workflow_id
+        - name
+        - position
+        - type
+        - config
+        - created_at
+        - updated_at
+      filter: {}
+update_permissions:
+  - role: public
+    permission:
+      columns:
+        - name
+        - position
+        - type
+        - config
+      filter: {}
+      check: null
+delete_permissions:
+  - role: public
+    permission:
+      filter: {}

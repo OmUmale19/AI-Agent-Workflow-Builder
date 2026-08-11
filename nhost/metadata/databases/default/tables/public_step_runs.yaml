@@ -1,0 +1,49 @@
+table:
+  name: step_runs
+  schema: public
+insert_permissions:
+  - role: public
+    permission:
+      check: {}
+      columns:
+        - id
+        - workflow_run_id
+        - workflow_step_id
+        - status
+        - input
+        - output
+        - error
+        - attempt_count
+select_permissions:
+  - role: public
+    permission:
+      columns:
+        - id
+        - workflow_run_id
+        - workflow_step_id
+        - status
+        - input
+        - output
+        - error
+        - attempt_count
+        - approved_by
+        - approved_at
+        - started_at
+        - completed_at
+        - created_at
+      filter: {}
+update_permissions:
+  - role: public
+    permission:
+      columns:
+        - status
+        - input
+        - output
+        - error
+        - attempt_count
+        - approved_by
+        - approved_at
+        - started_at
+        - completed_at
+      filter: {}
+      check: null

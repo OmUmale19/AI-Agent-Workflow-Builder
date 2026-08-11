@@ -1,0 +1,43 @@
+table:
+  name: workflow_runs
+  schema: public
+insert_permissions:
+  - role: public
+    permission:
+      check: {}
+      columns:
+        - id
+        - workflow_id
+        - triggered_by
+        - trigger_type
+        - status
+        - input
+        - output
+        - error
+select_permissions:
+  - role: public
+    permission:
+      columns:
+        - id
+        - workflow_id
+        - triggered_by
+        - trigger_type
+        - status
+        - input
+        - output
+        - error
+        - started_at
+        - completed_at
+        - created_at
+      filter: {}
+update_permissions:
+  - role: public
+    permission:
+      columns:
+        - status
+        - output
+        - error
+        - started_at
+        - completed_at
+      filter: {}
+      check: null

@@ -1,0 +1,40 @@
+table:
+  name: workflows
+  schema: public
+insert_permissions:
+  - role: public
+    permission:
+      check: {}
+      columns:
+        - id
+        - org_id
+        - name
+        - description
+        - is_active
+        - created_by
+select_permissions:
+  - role: public
+    permission:
+      columns:
+        - id
+        - org_id
+        - name
+        - description
+        - is_active
+        - created_by
+        - created_at
+        - updated_at
+      filter: {}
+update_permissions:
+  - role: public
+    permission:
+      columns:
+        - name
+        - description
+        - is_active
+      filter: {}
+      check: null
+delete_permissions:
+  - role: public
+    permission:
+      filter: {}
